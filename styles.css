@@ -47,8 +47,8 @@ body{font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helv
 .foot-links a{margin-left:12px;color:var(--muted);text-decoration:none}
 /* Videos */
 .videos{padding:40px 0}
-.videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px}
-.video-card{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#fff,#fffafc);padding:12px;border-radius:12px;box-shadow:0 8px 24px rgba(240,180,220,0.06)}
+.videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px;justify-items:center}
+.video-card{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(180deg,#fff,#fffafc);padding:12px;border-radius:12px;box-shadow:0 8px 24px rgba(240,180,220,0.06);max-width:720px;width:100%}
 .video-card .thumb{width:160px;flex:0 0 160px;border-radius:8px;overflow:hidden;background:linear-gradient(90deg,var(--pink-1),var(--pink-2));display:flex;align-items:center;justify-content:center}
 .video-card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .video-info h3{margin:0 0 6px 0}
