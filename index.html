@@ -35,22 +35,7 @@
             <a class="cv-link" href="#">Download CV</a>
           </div>
         </div>
-        <div class="hero-right">
-          <div class="profile-badge">
-            <!-- Simple placeholder svg profile -->
-            <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0" stop-color="#ffd6ea" />
-                  <stop offset="1" stop-color="#ffb6d5" />
-                </linearGradient>
-              </defs>
-              <rect rx="20" width="160" height="160" fill="url(#g)" />
-              <circle cx="80" cy="60" r="28" fill="#fff" opacity="0.9" />
-              <rect x="36" y="98" width="88" height="36" rx="9" fill="#fff" opacity="0.9" />
-            </svg>
-          </div>
-        </div>
+        <!-- removed hero-right / profile badge per user request -->
       </div>
     </section>
 
@@ -107,14 +92,68 @@
       </ul>
     </section>
 
+    <section id="videos" class="container videos">
+      <h2>Videos</h2>
+      <div class="videos-grid">
+        <article class="video-card">
+          <div class="thumb">
+            <img src="assets/thumb1.svg" alt="ExplainVis demo thumbnail" />
+          </div>
+          <div class="video-info">
+            <h3>ExplainVis Demo</h3>
+            <p class="muted">Short demo showing interactive explanations and counterfactuals.</p>
+            <div class="video-actions">
+              <button class="btn primary play-local" data-src="videos/explainvis_demo.mp4">Play local file</button>
+              <button class="btn ghost watch-youtube" data-youtube="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch on YouTube</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="thumb">
+            <img src="assets/thumb2.svg" alt="RobustNet demo thumbnail" />
+          </div>
+          <div class="video-info">
+            <h3>RobustNet Results</h3>
+            <p class="muted">Overview of robustness interventions and evaluation.</p>
+            <div class="video-actions">
+              <button class="btn primary play-local" data-src="videos/robustnet_results.mp4">Play local file</button>
+              <button class="btn ghost watch-youtube" data-youtube="https://www.youtube.com/watch?v=EXAMPLE2">Watch on YouTube</button>
+            </div>
+          </div>
+        </article>
+        <article class="video-card">
+          <div class="thumb">
+            <!-- Use YouTube thumbnail as preview -->
+            <img src="https://img.youtube.com/vi/3E3VS-d1Pos/hqdefault.jpg" alt="2021 Hanbyul Middle School Student Council Campaign" />
+          </div>
+          <div class="video-info">
+            <h3>2021 Hanbyul Middle School Student Council Official Campaign Video</h3>
+            <p class="muted">A campaign video from 2021 for Hanbyul Middle School's student council.</p>
+            <div class="video-actions">
+              <button class="btn ghost watch-youtube" data-youtube="https://youtu.be/3E3VS-d1Pos">Watch on YouTube</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Modal for playing YouTube embeds or local videos -->
+      <div id="video-modal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-inner">
+          <button class="modal-close" aria-label="Close">✕</button>
+          <div class="video-wrap" id="video-wrap"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="container contact">
       <h2>Contact</h2>
       <p>If you'd like to collaborate, see my work, or say hi — send an email or connect on social platforms below.</p>
       <div class="contact-row">
         <div>
-          <a class="btn primary" href="mailto:your.email@example.com">Email me</a>
-          <a class="btn ghost" href="#">LinkedIn</a>
-          <a class="btn ghost" href="#">GitHub</a>
+          <a class="btn primary" href="mailto:sunggyung328@icloud.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/sandiiyprk">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/parksandy328" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
         <form class="contact-form" onsubmit="submitContact(event)">
           <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -122,7 +161,7 @@
           <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
           <div style="display:flex;gap:12px;align-items:center;">
             <button class="btn primary" type="submit">Send</button>
-            <small class="muted">Or email: <a href="mailto:your.email@example.com">your.email@example.com</a></small>
+            <small class="muted">Or email: <a href="mailto:sunggyung328@icloud.com">sunggyung328@icloud.com</a></small>
           </div>
         </form>
       </div>

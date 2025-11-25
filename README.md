@@ -32,6 +32,7 @@ Customize
 Deploy
 
 - For a simple, free deploy: push this repo to GitHub and enable GitHub Pages from the `main` branch (or use `gh-pages`).
+- Auto-deploy with GitHub Actions (recommended): a workflow is included at `.github/workflows/deploy-pages.yml` that publishes the repository root to the `gh-pages` branch on every push to `main`. After the first successful run, set Pages to use the `gh-pages` branch in the repo settings.
 - You can also drag-and-drop `index.html` into Netlify or Vercel for a quick deployment.
 
 Next steps I can help with:

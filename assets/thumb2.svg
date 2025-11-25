@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1f6"/>
+      <stop offset="1" stop-color="#ffd6ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="10" fill="url(#g2)"/>
+  <rect x="40" y="50" width="80" height="60" rx="6" fill="#fff" opacity="0.9"/>
+  <text x="20" y="30" font-family="Poppins, Arial" font-size="18" fill="#6d0033">RobustNet Results</text>
+</svg>
