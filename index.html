@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sandy Park — AI Researcher & Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Sandy Park — AI researcher, college student. Projects, publications, and contact." />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">Sandy Park</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-card">
+        <div class="hero-left">
+          <h1><span class="cursive">Hi, I'm Sandy</span><br/><span class="role">AI researcher & college student</span></h1>
+          <p class="lead">I design and study machine learning models that are fair, robust, and explainable. I love building research prototypes and visual tools to make AI understandable.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+            <a class="cv-link" href="#">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="profile-badge">
+            <!-- Simple placeholder svg profile -->
+            <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#ffd6ea" />
+                  <stop offset="1" stop-color="#ffb6d5" />
+                </linearGradient>
+              </defs>
+              <rect rx="20" width="160" height="160" fill="url(#g)" />
+              <circle cx="80" cy="60" r="28" fill="#fff" opacity="0.9" />
+              <rect x="36" y="98" width="88" height="36" rx="9" fill="#fff" opacity="0.9" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>I am an AI researcher and undergraduate student interested in interpretable machine learning, model fairness, and human-AI interaction. I build prototypes, write reproducible experiments, and enjoy making technical ideas accessible through visuals and short write-ups.</p>
+      <div class="about-grid">
+        <div class="card">
+          <h3>Currently</h3>
+          <p>Undergraduate student studying Computer Science. Research assistant focusing on explainability and robustness in ML.</p>
+        </div>
+        <div class="card">
+          <h3>Skills</h3>
+          <p>Python, PyTorch, TensorFlow, ML research, data viz, reproducible experiments, Git.</p>
+        </div>
+        <div class="card">
+          <h3>Interests</h3>
+          <p>Interpretable AI, fairness, user-facing ML tools, research writing, mentoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>ExplainVis</h3>
+          <p>A visualization tool for model explanations that helps non-experts explore feature contributions and counterfactuals.</p>
+          <p class="muted">Tech: Python, Flask, D3</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>RobustNet</h3>
+          <p>Investigated robustness interventions for image classifiers and proposed an augmentation schedule improving worst-case error.</p>
+          <p class="muted">Tech: PyTorch, CIFAR-10</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>FairAssist</h3>
+          <p>Prototype for fairness-aware ranking with interpretable explanations for recommendation outputs.</p>
+          <p class="muted">Tech: Python, scikit-learn</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="container research">
+      <h2>Research & Publications</h2>
+      <ul class="research-list">
+        <li><strong>Paper Title</strong> — A short description about improving interpretability in large models. <a href="#">(PDF)</a></li>
+        <li><strong>Workshop</strong> — Visual tools for model debugging and education. <a href="#">(Slides)</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate, see my work, or say hi — send an email or connect on social platforms below.</p>
+      <div class="contact-row">
+        <div>
+          <a class="btn primary" href="mailto:your.email@example.com">Email me</a>
+          <a class="btn ghost" href="#">LinkedIn</a>
+          <a class="btn ghost" href="#">GitHub</a>
+        </div>
+        <form class="contact-form" onsubmit="submitContact(event)">
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+          <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
+          <div style="display:flex;gap:12px;align-items:center;">
+            <button class="btn primary" type="submit">Send</button>
+            <small class="muted">Or email: <a href="mailto:your.email@example.com">your.email@example.com</a></small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> Sandy Park — AI Researcher</div>
+      <div class="foot-links">
+        <a href="#">Privacy</a>
+        <a href="#">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
