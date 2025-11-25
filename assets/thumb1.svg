@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd6ea"/>
+      <stop offset="1" stop-color="#ffb6d5"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" rx="10" fill="url(#g1)"/>
+  <polygon points="120,80 120,100 150,90" fill="#fff" opacity="0.9"/>
+  <text x="20" y="30" font-family="Poppins, Arial" font-size="18" fill="#6d0033">ExplainVis Demo</text>
+</svg>

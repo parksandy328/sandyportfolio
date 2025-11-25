@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sandy Park —  A Grain of Wheat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Sandy Park — AI researcher, college student. Projects, publications, and contact." />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">Sandy Park</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-card">
+        <div class="videos-grid">
+          <article class="video-card">
+            <div class="thumb">
+              <!-- Use YouTube thumbnail as preview -->
+              <img src="https://img.youtube.com/vi/3E3VS-d1Pos/hqdefault.jpg" alt="2021 Hanbyul Middle School Student Council Campaign" />
+            </div>
+            <div class="video-info">
+              <h3>2021 Hanbyul Middle School Student Council Official Campaign Video</h3>
+              <p class="muted">A campaign video from 2021 for Hanbyul Middle School's student council.</p>
+              <div class="video-actions">
+                <button class="btn ghost watch-youtube" data-youtube="https://youtu.be/3E3VS-d1Pos">Watch on YouTube</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>ExplainVis</h3>
+          <p>A visualization tool for model explanations that helps non-experts explore feature contributions and counterfactuals.</p>
+          <p class="muted">Tech: Python, Flask, D3</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>RobustNet</h3>
+          <p>Investigated robustness interventions for image classifiers and proposed an augmentation schedule improving worst-case error.</p>
+          <p class="muted">Tech: PyTorch, CIFAR-10</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>FairAssist</h3>
+          <p>Prototype for fairness-aware ranking with interpretable explanations for recommendation outputs.</p>
+          <p class="muted">Tech: Python, scikit-learn</p>
+          <a class="small-link" href="#">Read more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="container research">
+      <h2>Research & Publications</h2>
+      <ul class="research-list">
+        <li><strong>Paper Title</strong> — A short description about improving interpretability in large models. <a href="#">(PDF)</a></li>
+        <li><strong>Workshop</strong> — Visual tools for model debugging and education. <a href="#">(Slides)</a></li>
+      </ul>
+    </section>
+
+    <section id="videos" class="container videos">
+      <h2>Videos</h2>
+      <div class="videos-grid">
+
+        <article class="video-card">
+          <div class="thumb">
+            <!-- Use YouTube thumbnail as preview -->
+            <img src="https://img.youtube.com/vi/3E3VS-d1Pos/hqdefault.jpg" alt="2021 Hanbyul Middle School Student Council Campaign" />
+          </div>
+          <div class="video-info">
+            <h3>2021 Hanbyul Middle School Student Council Official Campaign Video</h3>
+            <p class="muted">A campaign video from 2021 for Hanbyul Middle School's student council.</p>
+            <div class="video-actions">
+              <button class="btn ghost watch-youtube" data-youtube="https://youtu.be/3E3VS-d1Pos">Watch on YouTube</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Modal for playing YouTube embeds or local videos -->
+      <div id="video-modal" class="video-modal" aria-hidden="true">
+        <div class="video-modal-inner">
+          <button class="modal-close" aria-label="Close">✕</button>
+          <div class="video-wrap" id="video-wrap"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate, see my work, or say hi — send an email or connect on social platforms below.</p>
+      <div class="contact-row">
+        <div>
+          <a class="btn primary" href="mailto:sunggyung328@icloud.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/sandiiyprk">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/parksandy328" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <form class="contact-form" onsubmit="submitContact(event)">
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <input type="email" id="email" name="email" placeholder="Your email" required />
+          <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
+          <div style="display:flex;gap:12px;align-items:center;">
+            <button class="btn primary" type="submit">Send</button>
+            <small class="muted">Or email: <a href="mailto:sunggyung328@icloud.com">sunggyung328@icloud.com</a></small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; <span id="year"></span> Sandy Park — AI Researcher</div>
+      <div class="foot-links">
+        <a href="#">Privacy</a>
+        <a href="#">Credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
