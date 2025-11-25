@@ -1,0 +1,70 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+# Give the workflow write permission to repo contents so it can push to gh-pages.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+
+    - name: Setup Node (optional)
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: '.'
+        commit_message: 'Publish site via GitHub Actions'
+
+# Notes:
+# - If your organization blocks GITHUB_TOKEN write access, create a Personal Access
+#   Token (PAT) with `repo` scope and add it as a repository secret named
+#   ACTIONS_DEPLOY_KEY, then replace ${{ secrets.GITHUB_TOKEN }} with
+#   ${{ secrets.ACTIONS_DEPLOY_KEY }} above.name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false # we use the GH token (not repo token) to push
+
+      - name: Setup Node (optional caching for static websites)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: '.'
+          commit_message: 'Publish site via GitHub Actions'
